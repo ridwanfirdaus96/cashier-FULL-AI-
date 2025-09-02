@@ -82,7 +82,7 @@ const Cart: React.FC = () => {
                 <div>
                   <h3 className="font-semibold text-gray-800">{item.product.name}</h3>
                   <p className="text-gray-600 text-sm">{item.product.description}</p>
-                  <p className="text-blue-600 font-semibold">${item.price.toFixed(2)}</p>
+                  <p className="text-blue-600 font-semibold">Rp {Number(item.price).toLocaleString('id-ID')}</p>
                 </div>
               </div>
               
@@ -105,7 +105,7 @@ const Cart: React.FC = () => {
                 
                 <div className="text-right">
                   <p className="font-semibold text-gray-800">
-                    ${(item.price * item.quantity).toFixed(2)}
+                    Rp {(Number(item.price) * item.quantity).toLocaleString('id-ID')}
                   </p>
                 </div>
                 
@@ -123,7 +123,7 @@ const Cart: React.FC = () => {
             <div className="flex justify-between items-center mb-4">
               <span className="text-lg font-semibold text-gray-800">Total:</span>
               <span className="text-2xl font-bold text-blue-600">
-                ${getTotal().toFixed(2)}
+                Rp {getTotal().toLocaleString('id-ID')}
               </span>
             </div>
             
